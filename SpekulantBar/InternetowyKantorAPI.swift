@@ -22,7 +22,8 @@ class InternetowyKantorAPI: NSObject {
     
     func fetchRates(success: (KantorExchangeRate) -> Void) {
         let session = NSURLSession.sharedSession()
-        let url = NSURL(string: BASE_URL)
+        lastUpdate = Int64(NSDate().timeIntervalSince1970)
+        let url = NSURL(string: "\(BASE_URL)last-update=\(lastUpdate)")
         let task = session.dataTaskWithURL(url!) { data, response, error in
             if let rates = self.ratesFromJSONData(data) {
                 success(rates)
@@ -35,10 +36,13 @@ class InternetowyKantorAPI: NSObject {
         var err: NSError?
         typealias JSONDict = [String:AnyObject]
         
-        if let json = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.allZeros, error: &err) as? JSONDict {
+        if let json = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as? NSDictionary {
+            var buyRate = ((json["rates"] as! NSDictionary)["USD"] as! NSDictionary)["buying_rate"] as! String
+            var sellRate = ((json["rates"] as! NSDictionary)["USD"] as! NSDictionary)["selling_rate"] as! String
+
             var exchangeRate = KantorExchangeRate(
-                sellRate: json["actualSellRate"] as! String,
-                buyRate: json["actualBuyRate"] as! String
+                sellRate: sellRate,
+                buyRate: buyRate
             )
             
             return exchangeRate

@@ -12,24 +12,32 @@ class StatusMenuController: NSObject, KantorAPIDelegate {
     
     @IBOutlet weak var statusMenu: NSMenu!
     @IBOutlet weak var kantorAliorView: KantorAliorView!
+    @IBOutlet weak var internetowyView: InternetowyKantorView!
     
     let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1) // NSVariableStatusItemLength
     
     var kantorApi: KantorAliorAPI!
-    var ratesMenuItem: NSMenuItem!
+    var aliorMenuItem: NSMenuItem!
     var timer: NSTimer!
+    
+    var internetowyApi: InternetowyKantorAPI!
+    var internetowyMenuItem: NSMenuItem!
     
     override func awakeFromNib() {
         let icon = NSImage(named: "statusIcon")
         icon?.setTemplate(true)
         statusItem.image = icon
-        statusItem.title = "Test title"
+        statusItem.title = "N/A"
         statusItem.menu = statusMenu
         
 
         kantorApi = KantorAliorAPI(delegate: self)
-        ratesMenuItem = statusMenu.itemWithTitle("Kantor Alior")
-        ratesMenuItem.view = kantorAliorView
+        aliorMenuItem = statusMenu.itemWithTitle("Kantor Alior")
+        aliorMenuItem.view = kantorAliorView
+
+        internetowyApi = InternetowyKantorAPI(delegate: self)
+        internetowyMenuItem = statusMenu.itemWithTitle("Internetowy Kantor")
+        internetowyMenuItem.view = internetowyView
         
         timer = NSTimer(timeInterval: 10.0, target: self, selector: "updateRates:", userInfo: nil, repeats: true)
         NSRunLoop.currentRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
@@ -47,14 +55,13 @@ class StatusMenuController: NSObject, KantorAPIDelegate {
         NSApplication.sharedApplication().terminate(self)
     }
 
-    @IBAction func updateClicked(sender: NSMenuItem) {
-//        updateRates()
-    }
-
     func updateRates(timer: NSTimer) {
         kantorApi.fetchRates() { rates in
             self.kantorAliorView.update(rates)
             self.statusItem.title = rates.buyRate
+        }
+        internetowyApi.fetchRates() { rates in
+            self.internetowyView.update(rates)
         }
     }
 }

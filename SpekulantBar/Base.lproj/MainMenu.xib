@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
     </dependencies>
     <objects>
@@ -15,6 +16,7 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <customObject id="eWz-QK-Je2" userLabel="StatusMenuController" customClass="StatusMenuController" customModule="SpekulantBar" customModuleProvider="target">
             <connections>
+                <outlet property="internetowyView" destination="C2s-vl-Gkm" id="2Nh-rc-tk8"/>
                 <outlet property="kantorAliorView" destination="v9e-1w-bc1" id="w6r-ue-Gp2"/>
                 <outlet property="statusMenu" destination="M9V-MO-p5w" id="TRj-XE-2Hj"/>
             </connections>
@@ -22,6 +24,9 @@
         <menu id="M9V-MO-p5w">
             <items>
                 <menuItem title="Kantor Alior" id="R8b-2R-p3c">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Internetowy Kantor" id="ByC-Yk-A3N" userLabel="Internetowy Kantor">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="IbT-xO-E1r"/>
@@ -32,22 +37,14 @@
                     </connections>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="395.5" y="318.5"/>
+            <point key="canvasLocation" x="314.5" y="318.5"/>
         </menu>
         <customView id="v9e-1w-bc1" customClass="KantorAliorView" customModule="SpekulantBar" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="-3" width="226" height="50"/>
+            <rect key="frame" x="0.0" y="5" width="226" height="30"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yW1-ci-LnS">
-                    <rect key="frame" x="82" y="3" width="146" height="17"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Buy:" id="aux-NG-PFG">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="90a-vz-BL5" userLabel="Sell">
-                    <rect key="frame" x="82" y="28" width="146" height="17"/>
+                    <rect key="frame" x="45" y="8" width="84" height="17"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Sell:" id="I2n-wM-ryc">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -55,16 +52,56 @@
                     </textFieldCell>
                 </textField>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="upy-Ek-jat" userLabel="Alior Logo">
-                    <rect key="frame" x="9" y="0.0" width="50" height="50"/>
+                    <rect key="frame" x="9" y="0.0" width="30" height="30"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="1ek-Th-Am4"/>
                 </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yW1-ci-LnS">
+                    <rect key="frame" x="127" y="8" width="101" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Buy:" id="aux-NG-PFG">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
             <connections>
                 <outlet property="aliorLogo" destination="upy-Ek-jat" id="hvp-qX-Eal"/>
                 <outlet property="buyRate" destination="yW1-ci-LnS" id="szb-JN-dg9"/>
                 <outlet property="sellRate" destination="90a-vz-BL5" id="5WY-JV-XTi"/>
             </connections>
-            <point key="canvasLocation" x="608" y="302"/>
+            <point key="canvasLocation" x="608" y="292"/>
+        </customView>
+        <customView id="C2s-vl-Gkm" userLabel="Internetowy Kantor View" customClass="InternetowyKantorView" customModule="SpekulantBar" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="5" width="226" height="30"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vz2-5Q-mzG" userLabel="Sell">
+                    <rect key="frame" x="46" y="8" width="85" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Sell:" id="GNs-t7-xn9">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jf5-A4-a9p" userLabel="Buy">
+                    <rect key="frame" x="128" y="7" width="100" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Buy:" id="eR2-W3-vRo">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zku-QY-AGl" userLabel="IK Logo">
+                    <rect key="frame" x="10" y="1" width="30" height="30"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="Xmx-4b-3Mf"/>
+                </imageView>
+            </subviews>
+            <connections>
+                <outlet property="buyRate" destination="jf5-A4-a9p" id="24c-nG-lUa"/>
+                <outlet property="internetowyLogo" destination="Zku-QY-AGl" id="zT4-hX-Pbu"/>
+                <outlet property="sellRate" destination="vz2-5Q-mzG" id="qKO-Qh-gWi"/>
+            </connections>
+            <point key="canvasLocation" x="608" y="353"/>
         </customView>
     </objects>
 </document>

@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0DC088F01B4ABBE6008360E3 /* InternetowyKantorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC088EF1B4ABBE6008360E3 /* InternetowyKantorAPI.swift */; };
+		0DE2911C1B4BA7400032139F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE2911B1B4BA7400032139F /* Images.xcassets */; };
+		0DE2911E1B4BC6230032139F /* InternetowyKantorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE2911D1B4BC6230032139F /* InternetowyKantorView.swift */; };
 		0DF08EEC1B4A6CA800568CFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF08EEB1B4A6CA800568CFB /* AppDelegate.swift */; };
-		0DF08EEE1B4A6CA800568CFB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DF08EED1B4A6CA800568CFB /* Images.xcassets */; };
 		0DF08EF11B4A6CA800568CFB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DF08EEF1B4A6CA800568CFB /* MainMenu.xib */; };
 		0DF08EFD1B4A6CA800568CFB /* SpekulantBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF08EFC1B4A6CA800568CFB /* SpekulantBarTests.swift */; };
 		0DF08F071B4A753800568CFB /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF08F061B4A753800568CFB /* StatusMenuController.swift */; };
@@ -31,10 +32,11 @@
 
 /* Begin PBXFileReference section */
 		0DC088EF1B4ABBE6008360E3 /* InternetowyKantorAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetowyKantorAPI.swift; sourceTree = "<group>"; };
+		0DE2911B1B4BA7400032139F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../../../../.Trash/Images.xcassets; sourceTree = "<group>"; };
+		0DE2911D1B4BC6230032139F /* InternetowyKantorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetowyKantorView.swift; sourceTree = "<group>"; };
 		0DF08EE61B4A6CA800568CFB /* SpekulantBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpekulantBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DF08EEA1B4A6CA800568CFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DF08EEB1B4A6CA800568CFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0DF08EED1B4A6CA800568CFB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0DF08EF01B4A6CA800568CFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		0DF08EF61B4A6CA800568CFB /* SpekulantBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpekulantBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DF08EFB1B4A6CA800568CFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,11 +88,12 @@
 			isa = PBXGroup;
 			children = (
 				0DF08F081B4A84DE00568CFB /* KantorAliorAPI.swift */,
+				0DF08F0A1B4A9C4B00568CFB /* KantorAliorView.swift */,
 				0DC088EF1B4ABBE6008360E3 /* InternetowyKantorAPI.swift */,
+				0DE2911D1B4BC6230032139F /* InternetowyKantorView.swift */,
 				0DF08EEB1B4A6CA800568CFB /* AppDelegate.swift */,
 				0DF08F061B4A753800568CFB /* StatusMenuController.swift */,
-				0DF08F0A1B4A9C4B00568CFB /* KantorAliorView.swift */,
-				0DF08EED1B4A6CA800568CFB /* Images.xcassets */,
+				0DE2911B1B4BA7400032139F /* Images.xcassets */,
 				0DF08EEF1B4A6CA800568CFB /* MainMenu.xib */,
 				0DF08EE91B4A6CA800568CFB /* Supporting Files */,
 				0DF08F0C1B4AA78200568CFB /* NSTimer.swift */,
@@ -204,7 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DF08EEE1B4A6CA800568CFB /* Images.xcassets in Resources */,
+				0DE2911C1B4BA7400032139F /* Images.xcassets in Resources */,
 				0DF08EF11B4A6CA800568CFB /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DE2911E1B4BC6230032139F /* InternetowyKantorView.swift in Sources */,
 				0DF08F0F1B4AA7AC00568CFB /* Time.swift in Sources */,
 				0DF08F091B4A84DE00568CFB /* KantorAliorAPI.swift in Sources */,
 				0DF08F0D1B4AA78200568CFB /* NSTimer.swift in Sources */,
@@ -350,6 +354,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SpekulantBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -361,6 +366,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SpekulantBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
