@@ -16,8 +16,8 @@ class KantorAliorView: NSView {
 
 
     func update(rates: KantorExchangeRate) {
-        sellRate.stringValue = "Sell: \(rates.buyRate)"
-        buyRate.stringValue = "Buy: \(rates.sellRate)"
+        sellRate.stringValue = "Sell: \(rates.sellRate)"
+        buyRate.stringValue = "Buy: \(rates.buyRate)"
         let logo = NSImage(named: "aliorLogo")
         aliorLogo.image = logo
     }

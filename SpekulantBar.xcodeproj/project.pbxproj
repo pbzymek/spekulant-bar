@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DAB54421B4BFA4800D97505 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DAB54411B4BFA4800D97505 /* Images.xcassets */; };
 		0DC088F01B4ABBE6008360E3 /* InternetowyKantorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC088EF1B4ABBE6008360E3 /* InternetowyKantorAPI.swift */; };
-		0DE2911C1B4BA7400032139F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE2911B1B4BA7400032139F /* Images.xcassets */; };
 		0DE2911E1B4BC6230032139F /* InternetowyKantorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE2911D1B4BC6230032139F /* InternetowyKantorView.swift */; };
+		0DE291231B4BD9100032139F /* WalutomatApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE291221B4BD9100032139F /* WalutomatApi.swift */; };
+		0DE291251B4BDAF90032139F /* WalutomatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE291241B4BDAF90032139F /* WalutomatView.swift */; };
 		0DF08EEC1B4A6CA800568CFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF08EEB1B4A6CA800568CFB /* AppDelegate.swift */; };
 		0DF08EF11B4A6CA800568CFB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DF08EEF1B4A6CA800568CFB /* MainMenu.xib */; };
 		0DF08EFD1B4A6CA800568CFB /* SpekulantBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF08EFC1B4A6CA800568CFB /* SpekulantBarTests.swift */; };
 		0DF08F071B4A753800568CFB /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF08F061B4A753800568CFB /* StatusMenuController.swift */; };
 		0DF08F091B4A84DE00568CFB /* KantorAliorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF08F081B4A84DE00568CFB /* KantorAliorAPI.swift */; };
 		0DF08F0B1B4A9C4B00568CFB /* KantorAliorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF08F0A1B4A9C4B00568CFB /* KantorAliorView.swift */; };
-		0DF08F0D1B4AA78200568CFB /* NSTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF08F0C1B4AA78200568CFB /* NSTimer.swift */; };
-		0DF08F0F1B4AA7AC00568CFB /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF08F0E1B4AA7AC00568CFB /* Time.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,9 +31,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DAB54411B4BFA4800D97505 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0DC088EF1B4ABBE6008360E3 /* InternetowyKantorAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetowyKantorAPI.swift; sourceTree = "<group>"; };
-		0DE2911B1B4BA7400032139F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../../../../.Trash/Images.xcassets; sourceTree = "<group>"; };
 		0DE2911D1B4BC6230032139F /* InternetowyKantorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetowyKantorView.swift; sourceTree = "<group>"; };
+		0DE291221B4BD9100032139F /* WalutomatApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalutomatApi.swift; sourceTree = "<group>"; };
+		0DE291241B4BDAF90032139F /* WalutomatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalutomatView.swift; sourceTree = "<group>"; };
 		0DF08EE61B4A6CA800568CFB /* SpekulantBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpekulantBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DF08EEA1B4A6CA800568CFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DF08EEB1B4A6CA800568CFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,8 +46,6 @@
 		0DF08F061B4A753800568CFB /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
 		0DF08F081B4A84DE00568CFB /* KantorAliorAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KantorAliorAPI.swift; path = ../KantorAliorAPI.swift; sourceTree = "<group>"; };
 		0DF08F0A1B4A9C4B00568CFB /* KantorAliorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KantorAliorView.swift; sourceTree = "<group>"; };
-		0DF08F0C1B4AA78200568CFB /* NSTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTimer.swift; sourceTree = "<group>"; };
-		0DF08F0E1B4AA7AC00568CFB /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +66,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DE2911F1B4BD8550032139F /* KantorAlior */ = {
+			isa = PBXGroup;
+			children = (
+				0DF08F081B4A84DE00568CFB /* KantorAliorAPI.swift */,
+				0DF08F0A1B4A9C4B00568CFB /* KantorAliorView.swift */,
+			);
+			name = KantorAlior;
+			sourceTree = "<group>";
+		};
+		0DE291201B4BD89E0032139F /* InternetowyKantor */ = {
+			isa = PBXGroup;
+			children = (
+				0DC088EF1B4ABBE6008360E3 /* InternetowyKantorAPI.swift */,
+				0DE2911D1B4BC6230032139F /* InternetowyKantorView.swift */,
+			);
+			name = InternetowyKantor;
+			sourceTree = "<group>";
+		};
+		0DE291211B4BD8D80032139F /* Walutomat */ = {
+			isa = PBXGroup;
+			children = (
+				0DE291221B4BD9100032139F /* WalutomatApi.swift */,
+				0DE291241B4BDAF90032139F /* WalutomatView.swift */,
+			);
+			name = Walutomat;
+			sourceTree = "<group>";
+		};
 		0DF08EDD1B4A6CA800568CFB = {
 			isa = PBXGroup;
 			children = (
+				0DAB54411B4BFA4800D97505 /* Images.xcassets */,
 				0DF08EE81B4A6CA800568CFB /* SpekulantBar */,
 				0DF08EF91B4A6CA800568CFB /* SpekulantBarTests */,
 				0DF08EE71B4A6CA800568CFB /* Products */,
@@ -87,17 +115,13 @@
 		0DF08EE81B4A6CA800568CFB /* SpekulantBar */ = {
 			isa = PBXGroup;
 			children = (
-				0DF08F081B4A84DE00568CFB /* KantorAliorAPI.swift */,
-				0DF08F0A1B4A9C4B00568CFB /* KantorAliorView.swift */,
-				0DC088EF1B4ABBE6008360E3 /* InternetowyKantorAPI.swift */,
-				0DE2911D1B4BC6230032139F /* InternetowyKantorView.swift */,
+				0DE291211B4BD8D80032139F /* Walutomat */,
+				0DE2911F1B4BD8550032139F /* KantorAlior */,
+				0DE291201B4BD89E0032139F /* InternetowyKantor */,
 				0DF08EEB1B4A6CA800568CFB /* AppDelegate.swift */,
 				0DF08F061B4A753800568CFB /* StatusMenuController.swift */,
-				0DE2911B1B4BA7400032139F /* Images.xcassets */,
 				0DF08EEF1B4A6CA800568CFB /* MainMenu.xib */,
 				0DF08EE91B4A6CA800568CFB /* Supporting Files */,
-				0DF08F0C1B4AA78200568CFB /* NSTimer.swift */,
-				0DF08F0E1B4AA7AC00568CFB /* Time.swift */,
 			);
 			path = SpekulantBar;
 			sourceTree = "<group>";
@@ -207,7 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DE2911C1B4BA7400032139F /* Images.xcassets in Resources */,
+				0DAB54421B4BFA4800D97505 /* Images.xcassets in Resources */,
 				0DF08EF11B4A6CA800568CFB /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,13 +251,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DE2911E1B4BC6230032139F /* InternetowyKantorView.swift in Sources */,
-				0DF08F0F1B4AA7AC00568CFB /* Time.swift in Sources */,
 				0DF08F091B4A84DE00568CFB /* KantorAliorAPI.swift in Sources */,
-				0DF08F0D1B4AA78200568CFB /* NSTimer.swift in Sources */,
 				0DC088F01B4ABBE6008360E3 /* InternetowyKantorAPI.swift in Sources */,
 				0DF08F0B1B4A9C4B00568CFB /* KantorAliorView.swift in Sources */,
 				0DF08F071B4A753800568CFB /* StatusMenuController.swift in Sources */,
+				0DE291231B4BD9100032139F /* WalutomatApi.swift in Sources */,
 				0DF08EEC1B4A6CA800568CFB /* AppDelegate.swift in Sources */,
+				0DE291251B4BDAF90032139F /* WalutomatView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

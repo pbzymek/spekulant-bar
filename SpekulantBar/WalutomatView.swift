@@ -1,5 +1,5 @@
 //
-//  InternetowyKantorView.swift
+//  WalutomatView.swift
 //  SpekulantBar
 //
 //  Created by Piotr Bzymek on 07/07/15.
@@ -8,16 +8,18 @@
 
 import Cocoa
 
-class InternetowyKantorView: NSView {
 
-    @IBOutlet weak var internetowyLogo: NSImageView!
+class WalutomatView: NSView {
+
+    @IBOutlet weak var walutomatLogo: NSImageView!
     @IBOutlet weak var sellRate: NSTextField!
     @IBOutlet weak var buyRate: NSTextField!
-    
+
     func update(rates: KantorExchangeRate) {
         sellRate.stringValue = "Sell: \(rates.sellRate)"
         buyRate.stringValue = "Buy: \(rates.buyRate)"
-        let logo = NSImage(named: "IKLogo")
-        internetowyLogo.image = logo
+        let logo = NSImage(named: "WalutomatLogo")
+        walutomatLogo.image = logo
     }
+    
 }

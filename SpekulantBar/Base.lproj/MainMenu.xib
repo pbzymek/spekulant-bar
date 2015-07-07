@@ -19,6 +19,7 @@
                 <outlet property="internetowyView" destination="C2s-vl-Gkm" id="2Nh-rc-tk8"/>
                 <outlet property="kantorAliorView" destination="v9e-1w-bc1" id="w6r-ue-Gp2"/>
                 <outlet property="statusMenu" destination="M9V-MO-p5w" id="TRj-XE-2Hj"/>
+                <outlet property="walutomatView" destination="xhs-lh-nRB" id="Sjo-DN-C65"/>
             </connections>
         </customObject>
         <menu id="M9V-MO-p5w">
@@ -27,6 +28,9 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
                 <menuItem title="Internetowy Kantor" id="ByC-Yk-A3N" userLabel="Internetowy Kantor">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Walutomat" id="ICk-Me-L73" userLabel="I">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="IbT-xO-E1r"/>
@@ -43,21 +47,21 @@
             <rect key="frame" x="0.0" y="5" width="226" height="30"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="90a-vz-BL5" userLabel="Sell">
-                    <rect key="frame" x="45" y="8" width="84" height="17"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Sell:" id="I2n-wM-ryc">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="upy-Ek-jat" userLabel="Alior Logo">
                     <rect key="frame" x="9" y="0.0" width="30" height="30"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="1ek-Th-Am4"/>
                 </imageView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yW1-ci-LnS">
-                    <rect key="frame" x="127" y="8" width="101" height="17"/>
+                    <rect key="frame" x="45" y="7" width="101" height="17"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Buy:" id="aux-NG-PFG">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="90a-vz-BL5" userLabel="Sell">
+                    <rect key="frame" x="129" y="7" width="99" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Sell:" id="I2n-wM-ryc">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -72,19 +76,11 @@
             <point key="canvasLocation" x="608" y="292"/>
         </customView>
         <customView id="C2s-vl-Gkm" userLabel="Internetowy Kantor View" customClass="InternetowyKantorView" customModule="SpekulantBar" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="5" width="226" height="30"/>
+            <rect key="frame" x="0.0" y="0.0" width="226" height="31"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vz2-5Q-mzG" userLabel="Sell">
-                    <rect key="frame" x="46" y="8" width="85" height="17"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Sell:" id="GNs-t7-xn9">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jf5-A4-a9p" userLabel="Buy">
-                    <rect key="frame" x="128" y="7" width="100" height="17"/>
+                    <rect key="frame" x="46" y="7" width="100" height="17"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Buy:" id="eR2-W3-vRo">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -95,13 +91,53 @@
                     <rect key="frame" x="10" y="1" width="30" height="30"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="Xmx-4b-3Mf"/>
                 </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vz2-5Q-mzG" userLabel="Sell">
+                    <rect key="frame" x="128" y="7" width="85" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Sell:" id="GNs-t7-xn9">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
             <connections>
                 <outlet property="buyRate" destination="jf5-A4-a9p" id="24c-nG-lUa"/>
                 <outlet property="internetowyLogo" destination="Zku-QY-AGl" id="zT4-hX-Pbu"/>
                 <outlet property="sellRate" destination="vz2-5Q-mzG" id="qKO-Qh-gWi"/>
             </connections>
-            <point key="canvasLocation" x="608" y="353"/>
+            <point key="canvasLocation" x="608" y="365.5"/>
+        </customView>
+        <customView id="xhs-lh-nRB" userLabel="Walutomat View" customClass="WalutomatView" customModule="SpekulantBar" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="226" height="31"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ON-6C-LDh" userLabel="Buy">
+                    <rect key="frame" x="46" y="7" width="100" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Buy:" id="blf-6J-0hJ">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n1L-Oa-wNd" userLabel="Walutomat Logo">
+                    <rect key="frame" x="10" y="1" width="30" height="30"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="ITG-P7-pyl"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IU9-bb-0uh" userLabel="Sell">
+                    <rect key="frame" x="129" y="7" width="85" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Sell:" id="1jf-0I-R0J">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <connections>
+                <outlet property="buyRate" destination="4ON-6C-LDh" id="n98-XP-dwu"/>
+                <outlet property="sellRate" destination="IU9-bb-0uh" id="h6M-ey-S8g"/>
+                <outlet property="walutomatLogo" destination="n1L-Oa-wNd" id="8tB-bN-3Uf"/>
+            </connections>
+            <point key="canvasLocation" x="608" y="448.5"/>
         </customView>
     </objects>
 </document>

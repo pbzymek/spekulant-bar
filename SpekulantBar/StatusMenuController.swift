@@ -13,6 +13,7 @@ class StatusMenuController: NSObject, KantorAPIDelegate {
     @IBOutlet weak var statusMenu: NSMenu!
     @IBOutlet weak var kantorAliorView: KantorAliorView!
     @IBOutlet weak var internetowyView: InternetowyKantorView!
+    @IBOutlet weak var walutomatView: WalutomatView!
     
     let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1) // NSVariableStatusItemLength
     
@@ -22,7 +23,10 @@ class StatusMenuController: NSObject, KantorAPIDelegate {
     
     var internetowyApi: InternetowyKantorAPI!
     var internetowyMenuItem: NSMenuItem!
-    
+
+    var walutomatApi: WalutomatAPI!
+    var walutomatMenuItem: NSMenuItem!
+
     override func awakeFromNib() {
         let icon = NSImage(named: "statusIcon")
         icon?.setTemplate(true)
@@ -38,7 +42,11 @@ class StatusMenuController: NSObject, KantorAPIDelegate {
         internetowyApi = InternetowyKantorAPI(delegate: self)
         internetowyMenuItem = statusMenu.itemWithTitle("Internetowy Kantor")
         internetowyMenuItem.view = internetowyView
-        
+
+        walutomatApi = WalutomatAPI(delegate: self)
+        walutomatMenuItem = statusMenu.itemWithTitle("Walutomat")
+        walutomatMenuItem.view = walutomatView
+
         timer = NSTimer(timeInterval: 10.0, target: self, selector: "updateRates:", userInfo: nil, repeats: true)
         NSRunLoop.currentRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
         updateRates(timer)
@@ -62,6 +70,9 @@ class StatusMenuController: NSObject, KantorAPIDelegate {
         }
         internetowyApi.fetchRates() { rates in
             self.internetowyView.update(rates)
+        }
+        walutomatApi.fetchRates() { rates in
+            self.walutomatView.update(rates)
         }
     }
 }
