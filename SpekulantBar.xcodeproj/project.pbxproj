@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DC088F01B4ABBE6008360E3 /* InternetowyKantorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC088EF1B4ABBE6008360E3 /* InternetowyKantorAPI.swift */; };
 		0DF08EEC1B4A6CA800568CFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF08EEB1B4A6CA800568CFB /* AppDelegate.swift */; };
 		0DF08EEE1B4A6CA800568CFB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DF08EED1B4A6CA800568CFB /* Images.xcassets */; };
 		0DF08EF11B4A6CA800568CFB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DF08EEF1B4A6CA800568CFB /* MainMenu.xib */; };
 		0DF08EFD1B4A6CA800568CFB /* SpekulantBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF08EFC1B4A6CA800568CFB /* SpekulantBarTests.swift */; };
+		0DF08F071B4A753800568CFB /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF08F061B4A753800568CFB /* StatusMenuController.swift */; };
+		0DF08F091B4A84DE00568CFB /* KantorAliorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF08F081B4A84DE00568CFB /* KantorAliorAPI.swift */; };
+		0DF08F0B1B4A9C4B00568CFB /* KantorAliorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF08F0A1B4A9C4B00568CFB /* KantorAliorView.swift */; };
+		0DF08F0D1B4AA78200568CFB /* NSTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF08F0C1B4AA78200568CFB /* NSTimer.swift */; };
+		0DF08F0F1B4AA7AC00568CFB /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF08F0E1B4AA7AC00568CFB /* Time.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DC088EF1B4ABBE6008360E3 /* InternetowyKantorAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetowyKantorAPI.swift; sourceTree = "<group>"; };
 		0DF08EE61B4A6CA800568CFB /* SpekulantBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpekulantBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DF08EEA1B4A6CA800568CFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DF08EEB1B4A6CA800568CFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +39,11 @@
 		0DF08EF61B4A6CA800568CFB /* SpekulantBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpekulantBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DF08EFB1B4A6CA800568CFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DF08EFC1B4A6CA800568CFB /* SpekulantBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpekulantBarTests.swift; sourceTree = "<group>"; };
+		0DF08F061B4A753800568CFB /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
+		0DF08F081B4A84DE00568CFB /* KantorAliorAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KantorAliorAPI.swift; path = ../KantorAliorAPI.swift; sourceTree = "<group>"; };
+		0DF08F0A1B4A9C4B00568CFB /* KantorAliorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KantorAliorView.swift; sourceTree = "<group>"; };
+		0DF08F0C1B4AA78200568CFB /* NSTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTimer.swift; sourceTree = "<group>"; };
+		0DF08F0E1B4AA7AC00568CFB /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,10 +85,16 @@
 		0DF08EE81B4A6CA800568CFB /* SpekulantBar */ = {
 			isa = PBXGroup;
 			children = (
+				0DF08F081B4A84DE00568CFB /* KantorAliorAPI.swift */,
+				0DC088EF1B4ABBE6008360E3 /* InternetowyKantorAPI.swift */,
 				0DF08EEB1B4A6CA800568CFB /* AppDelegate.swift */,
+				0DF08F061B4A753800568CFB /* StatusMenuController.swift */,
+				0DF08F0A1B4A9C4B00568CFB /* KantorAliorView.swift */,
 				0DF08EED1B4A6CA800568CFB /* Images.xcassets */,
 				0DF08EEF1B4A6CA800568CFB /* MainMenu.xib */,
 				0DF08EE91B4A6CA800568CFB /* Supporting Files */,
+				0DF08F0C1B4AA78200568CFB /* NSTimer.swift */,
+				0DF08F0E1B4AA7AC00568CFB /* Time.swift */,
 			);
 			path = SpekulantBar;
 			sourceTree = "<group>";
@@ -205,6 +223,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DF08F0F1B4AA7AC00568CFB /* Time.swift in Sources */,
+				0DF08F091B4A84DE00568CFB /* KantorAliorAPI.swift in Sources */,
+				0DF08F0D1B4AA78200568CFB /* NSTimer.swift in Sources */,
+				0DC088F01B4ABBE6008360E3 /* InternetowyKantorAPI.swift in Sources */,
+				0DF08F0B1B4A9C4B00568CFB /* KantorAliorView.swift in Sources */,
+				0DF08F071B4A753800568CFB /* StatusMenuController.swift in Sources */,
 				0DF08EEC1B4A6CA800568CFB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,7 +346,7 @@
 		0DF08F011B4A6CA800568CFB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = ApplicationIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SpekulantBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -333,7 +357,7 @@
 		0DF08F021B4A6CA800568CFB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = ApplicationIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SpekulantBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -396,6 +420,7 @@
 				0DF08F021B4A6CA800568CFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0DF08F031B4A6CA800568CFB /* Build configuration list for PBXNativeTarget "SpekulantBarTests" */ = {
 			isa = XCConfigurationList;
@@ -404,6 +429,7 @@
 				0DF08F051B4A6CA800568CFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
