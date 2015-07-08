@@ -17,7 +17,7 @@ class WalutomatAPI: NSObject {
         self.delegate = delegate
     }
     
-    func fetchRates(success: (KantorExchangeRate) -> Void) {
+    func fetchRates(success: (CurrencyExchangeRate) -> Void) {
         let session = NSURLSession.sharedSession()
         let url = NSURL(string: BASE_URL)
         let task = session.dataTaskWithURL(url!) { data, response, error in
@@ -28,14 +28,18 @@ class WalutomatAPI: NSObject {
         task.resume()
     }
     
-    func ratesFromJSONData(data: NSData) -> KantorExchangeRate? {
+    func ratesFromJSONData(data: NSData) -> CurrencyExchangeRate? {
         var err: NSError?
         typealias JSONDict = [String:AnyObject]
         
         if let json = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.allZeros, error: &err) as? JSONDict {
-            var exchangeRate = KantorExchangeRate(
+            var exchangeRate = CurrencyExchangeRate(
                 sellRate: json["sell"] as! String,
-                buyRate: json["buy"] as! String
+                buyRate: json["buy"] as! String,
+                sourceCurrencyName: "US Dollar",
+                sourceCurrencyCode: "USD",
+                destinationCurrencyName: "Polski Złoty",
+                destinationCurrencyCode: "PLN"
             )
             
             return exchangeRate

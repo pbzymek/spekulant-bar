@@ -15,7 +15,7 @@ class WalutomatView: NSView {
     @IBOutlet weak var sellRate: NSTextField!
     @IBOutlet weak var buyRate: NSTextField!
 
-    func update(rates: KantorExchangeRate) {
+    func update(rates: CurrencyExchangeRate) {
         sellRate.stringValue = "Sell: \(rates.sellRate)"
         buyRate.stringValue = "Buy: \(rates.buyRate)"
         let logo = NSImage(named: "WalutomatLogo")

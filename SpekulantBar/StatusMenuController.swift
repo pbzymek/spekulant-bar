@@ -52,11 +52,8 @@ class StatusMenuController: NSObject, KantorAPIDelegate {
         updateRates(timer)
     }
 
-    func kantorDidUpdate(rates: KantorExchangeRate) {
-        if let kantorAliorItem = self.statusMenu.itemWithTitle("Kantor Alior") {
-            kantorAliorItem.title = rates.description
-        }
-        
+    func kantorDidUpdate(rates: CurrencyExchangeRate) {
+
     }
     
     @IBAction func quitClicked(sender: NSMenuItem) {

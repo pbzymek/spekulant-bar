@@ -8,19 +8,6 @@
 
 import Cocoa
 
-struct KantorExchangeRate {
-    var sellRate: String
-    var buyRate:  String
-    
-    var description: String {
-        return "Sell Rate: \(sellRate) | Buy Rate: \(buyRate)"
-    }
-}
-
-protocol KantorAPIDelegate {
-    func kantorDidUpdate(rates: KantorExchangeRate)
-}
-
 class KantorAliorAPI: NSObject {
     let BASE_URL = "http://kantor.aliorbank.pl/chart/USD/json"
 
@@ -30,7 +17,7 @@ class KantorAliorAPI: NSObject {
         self.delegate = delegate
     }
     
-    func fetchRates(success: (KantorExchangeRate) -> Void) {
+    func fetchRates(success: (CurrencyExchangeRate) -> Void) {
         let session = NSURLSession.sharedSession()
         let url = NSURL(string: BASE_URL)
         let task = session.dataTaskWithURL(url!) { data, response, error in
@@ -41,14 +28,18 @@ class KantorAliorAPI: NSObject {
         task.resume()
     }
     
-    func ratesFromJSONData(data: NSData) -> KantorExchangeRate? {
+    func ratesFromJSONData(data: NSData) -> CurrencyExchangeRate? {
         var err: NSError?
         typealias JSONDict = [String:AnyObject]
         
         if let json = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.allZeros, error: &err) as? JSONDict {
-            var exchangeRate = KantorExchangeRate(
+            var exchangeRate = CurrencyExchangeRate(
                 sellRate: json["actualSellRate"] as! String,
-                buyRate: json["actualBuyRate"] as! String
+                buyRate: json["actualBuyRate"] as! String,
+                sourceCurrencyName: "US Dollar",
+                sourceCurrencyCode: "USD",
+                destinationCurrencyName: "Polski Złoty",
+                destinationCurrencyCode: "PLN"
             )
             
             return exchangeRate

@@ -15,7 +15,7 @@ class KantorAliorView: NSView {
     @IBOutlet weak var aliorLogo: NSImageView!
 
 
-    func update(rates: KantorExchangeRate) {
+    func update(rates: CurrencyExchangeRate) {
         sellRate.stringValue = "Sell: \(rates.sellRate)"
         buyRate.stringValue = "Buy: \(rates.buyRate)"
         let logo = NSImage(named: "aliorLogo")

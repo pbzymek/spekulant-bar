@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D59DB671B4D03D800220279 /* CurrencyExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D59DB661B4D03D800220279 /* CurrencyExchangeRate.swift */; };
+		0D59DB691B4D06B100220279 /* ApiDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D59DB681B4D06B100220279 /* ApiDelegate.swift */; };
 		0DAB54421B4BFA4800D97505 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DAB54411B4BFA4800D97505 /* Images.xcassets */; };
 		0DC088F01B4ABBE6008360E3 /* InternetowyKantorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC088EF1B4ABBE6008360E3 /* InternetowyKantorAPI.swift */; };
 		0DE2911E1B4BC6230032139F /* InternetowyKantorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE2911D1B4BC6230032139F /* InternetowyKantorView.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D59DB661B4D03D800220279 /* CurrencyExchangeRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyExchangeRate.swift; sourceTree = "<group>"; };
+		0D59DB681B4D06B100220279 /* ApiDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiDelegate.swift; sourceTree = "<group>"; };
 		0DAB54411B4BFA4800D97505 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0DC088EF1B4ABBE6008360E3 /* InternetowyKantorAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetowyKantorAPI.swift; sourceTree = "<group>"; };
 		0DE2911D1B4BC6230032139F /* InternetowyKantorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetowyKantorView.swift; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 				0DF08F061B4A753800568CFB /* StatusMenuController.swift */,
 				0DF08EEF1B4A6CA800568CFB /* MainMenu.xib */,
 				0DF08EE91B4A6CA800568CFB /* Supporting Files */,
+				0D59DB661B4D03D800220279 /* CurrencyExchangeRate.swift */,
+				0D59DB681B4D06B100220279 /* ApiDelegate.swift */,
 			);
 			path = SpekulantBar;
 			sourceTree = "<group>";
@@ -253,7 +259,9 @@
 				0DE2911E1B4BC6230032139F /* InternetowyKantorView.swift in Sources */,
 				0DF08F091B4A84DE00568CFB /* KantorAliorAPI.swift in Sources */,
 				0DC088F01B4ABBE6008360E3 /* InternetowyKantorAPI.swift in Sources */,
+				0D59DB671B4D03D800220279 /* CurrencyExchangeRate.swift in Sources */,
 				0DF08F0B1B4A9C4B00568CFB /* KantorAliorView.swift in Sources */,
+				0D59DB691B4D06B100220279 /* ApiDelegate.swift in Sources */,
 				0DF08F071B4A753800568CFB /* StatusMenuController.swift in Sources */,
 				0DE291231B4BD9100032139F /* WalutomatApi.swift in Sources */,
 				0DF08EEC1B4A6CA800568CFB /* AppDelegate.swift in Sources */,
